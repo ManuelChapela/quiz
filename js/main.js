@@ -18,13 +18,13 @@ const questions = [
     },
 
     {
-        pregunta: "En España no puedes ponerle a tu hijo",
+        pregunta: "En Eggpaña no puedes ponerle a tu hijo",
         respuesta: ["Osama Bin Laden o Albert", "Franco, Benito y Adolf", "Judas, Jesucristo o Moisés", "Caín, Judas y Lenin"],
         correcta: 3
     },
 
     {
-        pregunta: "En España el Rey es inviolable. Es decir, que si quisiera...",
+        pregunta: "En Eggpaña el Rey es inviolable. Es decir, que si quisiera...",
         respuesta: ["Podría jugar una partida de dominó en la terraza de un bar de Mojacar", "Mendigar en la Puerta del Sol con un perro", "Poner a su hijo Lenin o a su cuñado Judas.", "Todas las anteriores son correctas"],
         correcta: 3
     }
@@ -182,31 +182,11 @@ function imprimePregunta(unaPregunta) {
             crearPuntuacionFinal.textContent = imprimePuntuacion;
             form.appendChild(crearPuntuacionFinal);
 
-            
-
-
-            
-
-            
-
-
-
-
-
-
-
         }
 
         sumatorioFinal(sumatorioCorrectas)
 
         // sumatorioFinal(sumatorioCorrectas)
-
-       
-
-
-
-
-
 
 
         }
