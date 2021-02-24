@@ -113,6 +113,7 @@ table {
 
 .indexTitle {
     font-size: 30px;
+    margin-top: 60px;
     margin-bottom: 30px;
     text-align: center;
     font-family: 'Chelsea Market', cursive;
@@ -138,6 +139,7 @@ table {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 .classPregunta {
@@ -207,8 +209,8 @@ table {
     flex-direction: column-reverse;
     justify-content: center; 
     align-items: center; 
-    margin-top: 6em;
-    /* height: 100vh;
+    /* margin-top: 4em; */
+     height: 100vh;
 
 }
 
@@ -276,6 +278,7 @@ table {
 section.mainContainer {
     height: 100vh;
 }
+
 
 
 
@@ -428,7 +431,13 @@ ESTILOS DE HTLM */
 
    .respuestaLabel, .respuestasInputIncorrecta, .respuestasInputCorrecta, .btnFinal, .respuestasLabel, .respuestasInput, .respuestasInputCorrecta{
         width: 300px;
-   }   
+   }  
+   
+   .mainContainerQuiz {
+     height: 100vh;
+
+}
+
 }
 
 
