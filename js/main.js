@@ -55,10 +55,19 @@ En España el Rey es inviolable. Es decir, que si quisiera...
 
 
 
-const form = document.getElementById("formContainer");
-const container = document.getElementById("mainContainerQuiz")
-const image = document.getElementById("imageQuiz")
 
+ const form = document.getElementById("formContainer");
+ const container = document.getElementById("mainContainerQuiz");
+ const image = document.getElementById("imageQuiz");
+
+
+let crearDivContenedor = document.createElement("div");
+    crearDivContenedor.setAttribute("class", "divContainer");
+    crearDivContenedor.setAttribute("id", "divContainer");
+    form.appendChild(crearDivContenedor);
+
+
+const div = document.getElementById("divContainer")
 
 
 
@@ -71,53 +80,52 @@ function imprimePregunta(unaPregunta) {
 
 
         let crearPregunta = document.createElement("p")
-        crearPregunta.setAttribute("class", "classPregunta") // ACABO DE CAMBIAR ESTO +[i]
-        crearPregunta.textContent = unaPregunta.pregunta;
-        form.appendChild(crearPregunta);
+            crearPregunta.setAttribute("class", "classPregunta") // ACABO DE CAMBIAR ESTO +[i]
+            crearPregunta.textContent = unaPregunta.pregunta;
+            form.appendChild(crearPregunta);
 
-        arrayEliminar.push(crearPregunta); // Para añadir información al arrayEliminar.
+            arrayEliminar.push(crearPregunta); // Para añadir información al arrayEliminar.
+
+
+      
+
 
 
         for (let j = 0; j < unaPregunta.respuesta.length; j++) {
 
             let crearRespuestasLabel = document.createElement("label");
-            crearRespuestasLabel.setAttribute("class", "respuestasLabel");
-            crearRespuestasLabel.textContent = unaPregunta.respuesta[j];
-            crearRespuestasLabel.setAttribute("for", "respuesta" + [i] + [j]);
-            form.appendChild(crearRespuestasLabel);
+                crearRespuestasLabel.setAttribute("class", "respuestasLabel");
+                crearRespuestasLabel.textContent = unaPregunta.respuesta[j];
+                crearRespuestasLabel.setAttribute("for", "respuesta" + [i] + [j]);
+                div.appendChild(crearRespuestasLabel);
 
-            arrayEliminar.push(crearRespuestasLabel); // Para añadir información al arrayEliminar.
+                arrayEliminar.push(crearRespuestasLabel); // Para añadir información al arrayEliminar.
 
 
             let crearRespuestasInput = document.createElement("input")
-            crearRespuestasInput.setAttribute("class", "respuestasInput");
-            crearRespuestasInput.setAttribute("type", "radio");
-            crearRespuestasInput.setAttribute("id", "respuesta" + [i] + [j]);
-            // crearRespuestasInput.setAttribute("name", "name" + [i]);
-            // crearRespuestasInput.setAttribute("value", i + "" + j);
-            crearRespuestasInput.textContent = unaPregunta.respuesta[j];
-            form.appendChild(crearRespuestasInput);
+                crearRespuestasInput.setAttribute("class", "respuestasInput");
+                crearRespuestasInput.setAttribute("type", "radio");
+                crearRespuestasInput.setAttribute("id", "respuesta" + [i] + [j]);
+                crearRespuestasInput.textContent = unaPregunta.respuesta[j];
+                div.appendChild(crearRespuestasInput);
 
-            arrayEliminar.push(crearRespuestasInput); // Para añadir información al arrayEliminar.
+                arrayEliminar.push(crearRespuestasInput); // Para añadir información al arrayEliminar.
 
 
 
 
             crearRespuestasLabel.addEventListener("click", () => {
-
-
-
                 if (j == unaPregunta.correcta) {
                     crearRespuestasLabel.setAttribute("class", "respuestasInputCorrecta") //Clase nueva= .respuestasInputCorrecta
                     sumatorioCorrectas++
-                    console.log(sumatorioCorrectas)
+                    // console.log(sumatorioCorrectas)
 
                 } else {
                     crearRespuestasLabel.setAttribute("class", "respuestasInputIncorrecta")
                 }
 
                 //FUNCIONAMIENTO DE SET TIME OUT setTimeout(function(){ alert("Hello"); }, 3000);
-                setTimeout(() => borrarCont(arrayEliminar), 900)
+                setTimeout(() => borrarCont(arrayEliminar), 1000)
                 setTimeout(() => imprimePregunta(questions[++i]), 1000) // OJO! Para que esto funcione, no puede ser multirespuesta
 
                 // Crear un boton que nos reinicie i
@@ -131,7 +139,7 @@ function imprimePregunta(unaPregunta) {
         // let imprimeEsto = ""
         function sumatorioFinal(sum) {
 
-            let imprimePuntuacion;
+            // let imprimePuntuacion;
             let imprimeTexto;
 
             if (sum < 2) {
@@ -155,16 +163,6 @@ function imprimePregunta(unaPregunta) {
                 imprimeTexto = "¡Nivel dios alcanzado!"
             }
 
-            let crearPuntuacionFinal = document.createElement("p")
-            crearPuntuacionFinal.setAttribute("class", "puntuacionFinal")
-            crearPuntuacionFinal.textContent = imprimePuntuacion;
-            form.appendChild(crearPuntuacionFinal);
-
-            let crearTextoFinal = document.createElement("p")
-            crearTextoFinal.setAttribute("class", "textoFinal")
-            crearTextoFinal.textContent = imprimeTexto;
-            form.appendChild(crearTextoFinal);
-
 
             let btnFinal = document.createElement("a")
                 btnFinal.setAttribute("class", "btnFinal");
@@ -173,14 +171,23 @@ function imprimePregunta(unaPregunta) {
                 btnFinal.textContent = "Volver a jugar";
                 form.appendChild(btnFinal);
 
-            // btnFinal.addEventListener("click", () =>
+            let crearTextoFinal = document.createElement("p")
+                crearTextoFinal.setAttribute("class", "textoFinal")
+                crearTextoFinal.textContent = imprimeTexto;
+                form.appendChild(crearTextoFinal);
 
-            // function finalState() {
-            //     if (i !== 0) {
-            //         i = 0;
-            //     }
-           
-            // });
+
+            let crearPuntuacionFinal = document.createElement("p")
+            crearPuntuacionFinal.setAttribute("class", "puntuacionFinal")
+            crearPuntuacionFinal.textContent = imprimePuntuacion;
+            form.appendChild(crearPuntuacionFinal);
+
+            
+
+
+            
+
+            
 
 
 
