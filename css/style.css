@@ -449,6 +449,13 @@ ESTILOS DE HTLM */
     .divContainer {
         margin: 0px 300px 0px 300px;
 }
-
-
 }
+
+@media screen and (min-width: 1618px) {  
+
+    .divContainer {
+        margin: 0px 480px 0px 480px;
+}
+}
+
+
