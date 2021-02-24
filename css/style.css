@@ -114,6 +114,7 @@ table {
 .indexTitle {
     font-size: 30px;
     margin-bottom: 30px;
+    text-align: center;
     font-family: 'Chelsea Market', cursive;
     /* border: solid 2px blue; */
 }
@@ -204,11 +205,10 @@ table {
 .mainContainerQuiz {
     display: flex;
     flex-direction: column-reverse;
-    /* margin: 40px; */
     justify-content: center; 
     align-items: center; 
-    height: 100vh;  
-    
+    margin-top: 6em;
+    /* height: 100vh;
 
 }
 
@@ -293,10 +293,7 @@ ESTILOS DE HTLM */
     margin: 180px 120px 70px 108px;
 }
 
-.downContainer {   
-    /* margin-bottom: 350px; */
-    width: 40%;
-}
+
 
 
 .classPregunta {
