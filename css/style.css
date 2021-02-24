@@ -61,13 +61,12 @@ table {
 /* ----------------------------------- ESTILOS DE INDEX.HTML -- PAGINA DE INICIO ------------------------------------ */ 
 
 
+
 .mainContainer {
     display: flex;
     flex-direction: column;
     justify-content: center; 
     align-items: center; 
-    /* height: ; */
-    /* height: 100%; */
     background-color: rgb(238, 238, 238) ;
    
     /* background-image: url("https://www.lafallera.es/wp-content/uploads/2020/02/K2F1902paella-valenciana1.jpg");
@@ -173,7 +172,7 @@ table {
 .respuestasInputCorrecta {
     text-align: center;
     margin: 10px;
-    width: 280px;
+    width: 200px;
     height: 60px;
     padding: 10px;
     border-radius: 3px;
@@ -189,7 +188,7 @@ table {
 .respuestasInputIncorrecta, .btnFinal{
     text-align: center;
     margin: 10px;
-    width: 280px;
+    width: 200px;
     height: 60px;
     padding: 10px;
     border-radius: 3px;
@@ -274,7 +273,9 @@ table {
 
 
 
-
+section.mainContainer {
+    height: 100vh;
+}
 
 
 

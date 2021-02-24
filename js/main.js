@@ -144,7 +144,7 @@ function imprimePregunta(unaPregunta) {
 
             if (sum < 2) {
                 imprimePuntuacion = sum + " / 5";
-                imprimeTexto = "Eres un looser"
+                imprimeTexto = "Eres un looser" 
 
             } else if (sum == 2) {
                 imprimePuntuacion = sum + " / 5";
